@@ -1,0 +1,1 @@
+termux-chroot php-fpm & nginx &
