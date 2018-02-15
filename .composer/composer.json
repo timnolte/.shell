@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mkusher/padawan": "^0.2.1"
+    }
+}
