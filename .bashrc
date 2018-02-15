@@ -96,9 +96,10 @@ fi
 # Add additional LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/data/com.termux/files/usr/local/lib
 
-# Add /usr/local directories to PATH
+# Add additional directories to PATH
 export PATH=$PATH:/data/data/com.termux/files/usr/local/bin
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.composer/vendor/bin
 
 # Set GO path
 export GOPATH=`pwd`/go
