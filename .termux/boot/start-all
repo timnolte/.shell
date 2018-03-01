@@ -1,4 +1,4 @@
 termux-wake-lock
-../001-start-sshd
-../002-start-mariadb
-../003-start-nginx
+~/.termux/001-start-sshd
+~/.termux/002-start-mariadb
+~/.termux/003-start-nginx

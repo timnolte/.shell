@@ -110,4 +110,4 @@ export PATH=$PATH:~/go/bin
 # Make a home-based tmp
 export TMPDIR="$HOME/.tmp"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
