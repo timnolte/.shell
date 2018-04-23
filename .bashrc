@@ -93,6 +93,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Add WordPress Bash Completion
+source ~/.local/share/bash-completion/completions/wp-completion.bash
+
 # Add additional LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/data/com.termux/files/usr/local/lib
 

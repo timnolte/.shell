@@ -32,3 +32,4 @@ alias vi='nvim'
 # common cd shortcuts
 alias go-sfi='cd ~/workspace/wp-content/plugins/scheduled-featured-images'
 alias go-wpsqrl='cd ~/workspace/wp-content/plugins/wp-sqrl'
+alias go-ewo='cd ~/workspace/wp-content/plugins/endowp-oembed'
