@@ -3,6 +3,7 @@
 function setup() {
 	HOME_LOCAL="$HOME/.local"
   HOME_BIN="$HOME_LOCAL/bin"
+  HOME_TMP="$HOME/.tmp"
 
   # Make home local directory if it doesn't exist
   if [ ! -d "$HOME_LOCAL" ]; then
@@ -10,11 +11,16 @@ function setup() {
   fi
   
   
-  # Make local bin directory if it doesn't exist
+  # Make home local bin directory if it doesn't exist
   if [ ! -d "$HOME_BIN" ]; then
     mkdir -p $HOME_BIN
   fi
 
+
+  # Make home temp directory
+  if [ ! -d "$HOME_TMP" ]; then
+    mkdir -p $HOME_TMP
+  fi
 
 
   # Install local composer
