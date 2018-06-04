@@ -1,7 +1,7 @@
 [user]
-        name = tim.nolte
-        email = tim.nolte@ndigitals.com
+  name = tim.nolte
+  email = tim.nolte@ndigitals.com
 [push]
-        default = simple
+  default = simple
 [core]
-	excludesfile = ~/.cvsignore
+  excludesfile = ~/.cvsignore
