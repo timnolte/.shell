@@ -29,7 +29,9 @@ alias nvimcu='rm -I ~/nvim/undo/*'
 alias vim='nvim'
 alias vi='nvim'
 
-# common cd shortcuts
-alias go-sfi='cd ~/workspace/wp-content/plugins/scheduled-featured-images'
-alias go-wpsqrl='cd ~/workspace/wp-content/plugins/wp-sqrl'
-alias go-ewo='cd ~/workspace/wp-content/plugins/endowp-oembed'
+# common workspace cd shortcuts
+alias go-wp='cd ~/workspace/wpdev/wp'
+alias go-wpp='cd ~/workspace/wpdev/wp-content/plugins'
+alias go-sfi='cd ~/workspace/wpdev/wp-content/plugins/scheduled-featured-images'
+alias go-wpsqrl='cd ~/workspace/wpdev/wp-content/plugins/wp-sqrl'
+alias go-ewo='cd ~/workspace/wpdev/wp-content/plugins/endowp-oembed'
