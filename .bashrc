@@ -91,10 +91,15 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fi
 
-# Add WordPress Bash Completion
-source ~/.local/share/bash-completion/completions/wp-completion.bash
+  # Add rclone Bash Completion
+  if [ -f "~/.local/share/bash-completion/completions/rclone.bash" ]; then
+    source ~/.local/share/bash-completion/completions/rclone.bash
+  fi
+
+  # Add WordPress Bash Completion
+  source ~/.local/share/bash-completion/completions/wp-completion.bash
+fi
 
 # Add additional LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/data/com.termux/files/usr/local/lib
@@ -113,4 +118,4 @@ export PATH=$PATH:~/go/bin
 # Make a home-based tmp
 export TMPDIR="$HOME/.tmp"
 
-#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

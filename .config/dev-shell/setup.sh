@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 function setup() {
-	HOME_LOCAL="$HOME/.local"
+	
+  HOME_LOCAL="$HOME/.local"
   HOME_BIN="$HOME_LOCAL/bin"
   HOME_TMP="$HOME/.tmp"
 
@@ -10,18 +11,15 @@ function setup() {
     mkdir -p $HOME_LOCAL
   fi
   
-  
   # Make home local bin directory if it doesn't exist
   if [ ! -d "$HOME_BIN" ]; then
     mkdir -p $HOME_BIN
   fi
 
-
   # Make home temp directory
   if [ ! -d "$HOME_TMP" ]; then
     mkdir -p $HOME_TMP
   fi
-
 
   # Install local composer
 	if [ ! -f "$HOME_BIN/composer" ]; then
@@ -45,7 +43,6 @@ function setup() {
     echo 'composer installed'
 	fi
 
-
 	# Install WP-CLI
 	if [ ! -f "$HOME_BIN/wp" ]; then
 		echo 'installing latest wp-cli'
@@ -57,6 +54,13 @@ function setup() {
     mv wp-cli.phar $HOME_BIN/wp
 		echo 'wp-cli installed'
 	fi
+
+  # Install rclone bash completion
+  if [ -f "/usr/bin/rclone" ]; then
+    echo 'installing current rclone bash completion'
+    rclone genautocomplete bash $HOME_LOCAL/share/bash-completion/completions/rclone.bash
+  fi
+
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
