@@ -1,1 +1,2 @@
-termux-chroot mysql.server start &
+#termux-chroot /mysql.server start &
+termux-chroot mysqld_safe -u root &

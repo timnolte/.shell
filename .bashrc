@@ -93,13 +93,13 @@ if ! shopt -oq posix; then
   fi
 
   # Add rclone Bash Completion
-  if [ -f ".local/share/bash-completion/completions/rclone.bash" ]; then
-    . .local/share/bash-completion/completions/rclone.bash
+  if [ -f ~/.local/share/bash-completion/completions/rclone.bash ]; then
+    . ~/.local/share/bash-completion/completions/rclone.bash
   fi
 
   # Add WordPress Bash Completion
-  if [ -f ".local/share/bash-completion/completions/wp-completion.bash" ]; then
-    . .local/share/bash-completion/completions/wp-completion.bash
+  if [ -f ~/.local/share/bash-completion/completions/wp-completion.bash ]; then
+    . ~/.local/share/bash-completion/completions/wp-completion.bash
   fi
 fi
 
@@ -118,6 +118,8 @@ export GOPATH=`pwd`/go
 export PATH=$PATH:~/go/bin
 
 # Define a home-based tmp
-export TMPDIR="$HOME/.tmp"
+export TMPDIR=~/.tmp
 
-[ -f .fzf.bash ] && . .fzf.bash
+if [ -f ~/.fzf.bash ]; then
+  . ~/.fzf.bash
+fi
