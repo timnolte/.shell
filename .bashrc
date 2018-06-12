@@ -108,8 +108,16 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/data/com.termux/files/usr/local/li
 
 # Add additional directories to PATH
 export PATH=$PATH:/data/data/com.termux/files/usr/local/bin
-export PATH=$PATH:~/.local/bin
-export PATH=$PATH:~/.composer/vendor/bin
+
+if [ -d ~/.local/bin ]; then
+  export PATH=$PATH:~/.local/bin
+fi
+if [ -d ~/.composer/vendor/bin ]; then
+  export PATH=$PATH:~/.composer/vendor/bin
+fi
+if [ -d ~/workspace/wpdev/vendor/bin ]; then
+  export PATH=$PATH:~/workspace/wpdev/vendor/bin
+fi
 
 # Set GO path
 export GOPATH=`pwd`/go
