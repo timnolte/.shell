@@ -123,7 +123,9 @@ fi
 export GOPATH=`pwd`/go
 
 # Add GO bin to PATH
-export PATH=$PATH:~/go/bin
+if [ -d ~/go/bin ]; then
+  export PATH=$PATH:~/go/bin
+fi
 
 # Define a home-based tmp
 export TMPDIR=~/.tmp
