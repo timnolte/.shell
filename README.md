@@ -15,6 +15,7 @@ My shell/home directory setup.
 * [nginx](https://nginx.org/en/)
 * php-fpm
 * [python](https://www.python.org/)
+* [ruby](https://www.ruby-lang.org/)
 * [golang](https://golang.org/)
 * [rclone](https://rclone.org/)
 * [neovim](https://neovim.io/)
