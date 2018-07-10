@@ -1,17 +1,14 @@
 # Setup fzf
 # ---------
-if [ ! "$PATH" == */.fzf/bin* ]; then
-  export PATH=$PATH:~/.fzf/bin
+if [[ ! "$PATH" == */data/data/com.termux/files/home/.fzf/bin* ]]; then
+  export PATH="$PATH:/data/data/com.termux/files/home/.fzf/bin"
 fi
 
 # Auto-completion
 # ---------------
-if [ $- == *i* ]; then
-  . ~/.fzf/shell/completion.bash
-fi
+[[ $- == *i* ]] && source "/data/data/com.termux/files/home/.fzf/shell/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-if [ -f ~/.fzf/shell/key-bindings.bash ]; then
-. ~/.fzf/shell/key-bindings.bash
-fi
+source "/data/data/com.termux/files/home/.fzf/shell/key-bindings.bash"
+

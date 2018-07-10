@@ -3,7 +3,7 @@
 2. apt upgrade
 3. apt install coreutils
 4. apt install termux-tools proot util-linux net-tools tracepath tree wget curl procps mlocate man gettext
-5. apt install ccrypt libcrypt libcrypt-dev
+5. apt install ccrypt libcrypt libcrypt-dev gnupg2
 6. apt install grep bash-completion 
 7. apt install openssh git subversion php nodejs mariadb nginx php-fpm python python-dev python2 python2-dev ruby ruby-dev golang make make-dev
 8. apt install rclone neovim ctags

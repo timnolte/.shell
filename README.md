@@ -20,6 +20,7 @@ My shell/home directory setup.
 * [rclone](https://rclone.org/)
 * [neovim](https://neovim.io/)
 * ctags
+* [gnupg2](https://www.gnupg.org/)
 
 ## Termux Setup
 [Termux specific environment setup](termux.md)

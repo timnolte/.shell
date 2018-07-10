@@ -5,3 +5,5 @@
   default = simple
 [core]
   excludesfile = ~/.cvsignore
+[color]
+	ui = auto
