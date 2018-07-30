@@ -123,6 +123,7 @@ perl
 php
 php-fpm
 pinentry
+pkg-config
 poppler
 procps
 proot
