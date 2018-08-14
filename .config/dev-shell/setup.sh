@@ -5,6 +5,8 @@ function setup() {
   HOME_LOCAL="$HOME/.local"
   HOME_BIN="$HOME_LOCAL/bin"
   HOME_TMP="$HOME/.tmp"
+  HOME_GO="$HOME/go"
+  HOME_GO_BIN="$HOME_GO/bin"
 
   # Make home local directory if it doesn't exist
   if [ ! -d "$HOME_LOCAL" ]; then
@@ -19,6 +21,16 @@ function setup() {
   # Make home temp directory
   if [ ! -d "$HOME_TMP" ]; then
     mkdir -p $HOME_TMP
+  fi
+
+  # Make home GO path
+  if [ ! -d "$HOME_GO" ]; then
+    mkdir -p $HOME_GO
+  fi
+
+  # Make home GO binary path
+  if [ ! -d "$HOME_GO_BIN" ]; then
+    mkdir -p $HOME_GO_BIN
   fi
 
   # Install local composer
