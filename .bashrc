@@ -9,6 +9,18 @@ case $- in
       *) return;;
 esac
 
+# set a variable to identify running under Termux
+termux_root=
+if [ -d /data/data/com.termux/files ]; then
+  termux_root=/data/data/com.termux/files
+fi
+
+# set a WordPress development workspace directory
+workspace=~/workspace
+if [ -d "$workspace"/wpdev ]; then
+  workspace="$workspace"/wpdev
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -29,7 +41,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /data/data/com.termux/files/usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x "$termux_root"/usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -47,7 +59,7 @@ esac
 force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /data/data/com.termux/files/usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    if [ -x "$termux_root"/usr/bin/tput ] && tput setaf 1 >&/dev/null; then
         # We have color support; assume it's compliant with Ecma-48
         # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
         # a case would tend to support setf rather than setaf.)
@@ -82,15 +94,20 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /data/data/com.termux/files/usr/share/bash-completion/bash_completion ]; then
-    . /data/data/com.termux/files/usr/share/bash-completion/bash_completion
+  if [ -f "$termux_root"/usr/share/bash-completion/bash_completion ]; then
+    . "$termux_root"/usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
   # Add rclone Bash Completion
   if [ -f ~/.local/share/bash-completion/completions/rclone.bash ]; then
@@ -104,10 +121,10 @@ if ! shopt -oq posix; then
 fi
 
 # Add additional LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/data/com.termux/files/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$termux_root"/usr/local/lib
 
 # Add additional directories to PATH
-export PATH=$PATH:/data/data/com.termux/files/usr/local/bin
+export PATH=$PATH:"$termux_root"/usr/local/bin
 
 if [ -d ~/.local/bin ]; then
   export PATH=$PATH:~/.local/bin
@@ -115,8 +132,11 @@ fi
 if [ -d ~/.composer/vendor/bin ]; then
   export PATH=$PATH:~/.composer/vendor/bin
 fi
-if [ -d ~/workspace/wpdev/vendor/bin ]; then
-  export PATH=$PATH:~/workspace/wpdev/vendor/bin
+if [ -d "$workspace"/vendor/bin ]; then
+  export PATH=$PATH:"$workspace"/vendor/bin
+fi
+if [ -d ~/vendor/bin ]; then
+  export PATH=$PATH:~/vendor/bin
 fi
 
 # Set GO path

@@ -1,5 +1,5 @@
 # enable color support of ls & grep, and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
+if [ -x "$termux_root"/usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
 
@@ -28,10 +28,12 @@ alias nvimc='rm -I ~/nvim/swap/*'
 alias nvimcu='rm -I ~/nvim/undo/*'
 alias vim='nvim'
 alias vi='nvim'
+alias vimdiff='nvim -d'
 
 # common workspace cd shortcuts
-alias go-wp='cd ~/workspace/wpdev/wp'
-alias go-wpp='cd ~/workspace/wpdev/wp-content/plugins'
-alias go-sfi='cd ~/workspace/wpdev/wp-content/plugins/scheduled-featured-images'
-alias go-wpsqrl='cd ~/workspace/wpdev/wp-content/plugins/wp-sqrl'
-alias go-ewo='cd ~/workspace/wpdev/wp-content/plugins/endowp-oembed'
+alias go-wp='cd ${workspace}/wp'
+alias go-wpp='cd ${workspace}/wp-content/plugins'
+alias go-sfi='cd ${workspace}/wp-content/plugins/scheduled-featured-images'
+alias go-wpsqrl='cd ${workspace}/wp-content/plugins/wp-sqrl'
+alias go-ewo='cd ${workspace}/wp-content/plugins/endowp-oembed'
+alias go-wjp='cd ${workspace}/wp-content/plugins/jetpack'
