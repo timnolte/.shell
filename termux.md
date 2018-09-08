@@ -17,7 +17,7 @@
 * npm install -g neovim
 
 # MariaDB Setup
-~Default install instructions after package has been installed~
+*Default install instructions after package has been installed*
 ```
 To start mysqld at boot time you have to copy
 support-files/mysql.server to the right place for your system
