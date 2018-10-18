@@ -1,0 +1,44 @@
+# Development & System Directories
+backup
+node_modules
+vendor
+go
+neovim-ide-setup
+storage
+*build
+workspace
+
+# Local Home Directories
+.cache
+.composer
+#.config/configstore/
+#.config/keybase/
+#.config/nginx/sites-enabled/
+#.config/nvim/
+.fzf
+.gem
+.gnupg
+.local/bin
+.local/lib
+.local/share
+.node-gyp
+.npm
+.pdepend
+.subversion
+.tmp
+
+# Files
+.bash_history
+.lesshst
+*.logs
+.mysql_history
+.python_history
+.ssh/authorized_keys
+.ssh/known_hosts
+.ssh/*_rsa*
+.v8flags.*
+.wget-hsts
+.yarnrc
+passwds.txt
+tags
+tags.*

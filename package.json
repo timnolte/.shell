@@ -1,0 +1,28 @@
+{
+  "name": "shell",
+  "version": "1.0.0",
+  "description": "My shell/home directory setup.",
+  "main": "-",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-register": "^6.26.0",
+    "node-gyp": "^3.8.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-webfont": "^1.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timnolte/.shell.git"
+  },
+  "author": "Tim Nolte <tim.nolte@ndigitals.com>",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/timnolte/.shell/issues"
+  },
+  "homepage": "https://github.com/timnolte/.shell#readme"
+}
