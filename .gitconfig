@@ -6,7 +6,7 @@
 [core]
   excludesfile = ~/.cvsignore
 [color]
-  ui = auto
+	ui = true
 [merge]
   tool = vimdiff
 [mergetool]
@@ -17,3 +17,5 @@
   tool = vimdiff
 [difftool]
   prompt = false
+[alias]
+	pull-rebase = pull --single-branch --rebase=preserve

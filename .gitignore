@@ -23,9 +23,11 @@ workspace
 .local/share
 .node-gyp
 .npm
+.nvm
 .pdepend
 .subversion
 .tmp
+.wp-cli
 
 # Files
 .bash_history
