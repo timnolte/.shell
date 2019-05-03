@@ -19,10 +19,13 @@ if [ -d /data/data/com.termux/files ]; then
   termux_root=/data/data/com.termux/files
 fi
 
-# set a WordPress development workspace directory
+# set a development workspace directory
 workspace=~/workspace
+
+# set a WordPress development workspace directory
+wp_workspace="$workspace"
 if [ -d "$workspace"/wpdev ]; then
-  workspace="$workspace"/wpdev
+  wp_workspace="$workspace"/wpdev
 fi
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -138,6 +141,9 @@ if [ -d ~/.composer/vendor/bin ]; then
 fi
 if [ -d "$workspace"/vendor/bin ]; then
   export PATH=$PATH:"$workspace"/vendor/bin
+fi
+if [ -d "$wp_workspace"/vendor/bin ]; then
+  export PATH=$PATH:"$wp_workspace"/vendor/bin
 fi
 if [ -d ~/vendor/bin ]; then
   export PATH=$PATH:~/vendor/bin
