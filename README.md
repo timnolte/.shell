@@ -24,3 +24,6 @@ My shell/home directory setup.
 
 ## Termux Setup
 [Termux specific environment setup](termux.md)
+
+## Crostini Setup
+[Chrostini specific environment setup](crostini.md)

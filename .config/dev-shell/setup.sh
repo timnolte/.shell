@@ -68,9 +68,13 @@ function setup() {
 	fi
 
   # Install rclone bash completion
-  if [ -f "/usr/bin/rclone" ]; then
+  if [ -f "/usr/bin/rclone" -a ! -d $HOME_LOCAL/share/bash-completion ] || [ -f "usr/bin/rclone" -a ! -d /etc/bash-completion ]; then
     echo 'installing current rclone bash completion'
-    rclone genautocomplete bash $HOME_LOCAL/share/bash-completion/completions/rclone.bash
+    if [ -d $HOME_LOCAL/share/bash-completion ]; then
+    	rclone genautocomplete $HOME_LOCAL/share/bash-completion/completions/rclone.bash
+    else
+	sudo rclone genautocomplete
+    fi
   fi
 
 }
