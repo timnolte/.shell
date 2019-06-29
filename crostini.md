@@ -20,30 +20,30 @@ sudo apt install ca-certificates apt-transport-https
 
 ## Install PHP 7.3
 
-1. wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
-3. echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
-4. sudo apt update
-5. sudo apt upgrade
-6. sudo apt install php7.3-fpm php7.3-opcache php7.3-xml php7.3-xsl
+1. `wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -`
+3. `echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list`
+4. `sudo apt update`
+5. `sudo apt upgrade`
+6. `sudo apt install php7.3-fpm php7.3-opcache php7.3-xml php7.3-xsl`
 
 
 ## Setup Shell
 
 1. Install
-  * ~/.ssh/timnolte_id_rsa
+   - `~/.ssh/timnolte_id_rsa`
 
-2. git init
-3. git remote add origin git@github.com:timnolte/.shell.git
-4. GIT_SSH_COMMAND="ssh -i ~/.ssh/timnolte_id_rsa" git fetch
+2. `git init`
+3. `git remote add origin git@github.com:timnolte/.shell.git`
+4. `GIT_SSH_COMMAND="ssh -i ~/.ssh/timnolte_id_rsa" git fetch`
 5. Backup Current Home
-  * mkdir backup
-  * cp -R .* ./backup/
-6. git checkout master
-8. mkdir workspace
+   - `mkdir backup`
+   - `cp -R .* ./backup/`
+6. `git checkout master`
+8. `mkdir workspace`
 
 ### Setup Development Shell
 
-1. ~/.config/dev-shell/setup.sh
+1. `~/.config/dev-shell/setup.sh`
 
 
 ## Build & Install Python 3.7
@@ -68,7 +68,6 @@ sudo apt install xz-utils tk-dev libgdbm-dev liblzma-dev uuid-dev
 4. `./configure --enable-optimizations --with-ensurepip=install`
 5. `make -j8`
 6. `sudo make install`
-
 
 
 ### Setup Python & pip 3.7 as Default Python & Python 3
