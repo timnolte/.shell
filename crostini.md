@@ -24,7 +24,7 @@ sudo apt install ca-certificates apt-transport-https
 3. `echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list`
 4. `sudo apt update`
 5. `sudo apt upgrade`
-6. `sudo apt install php7.3-fpm php7.3-opcache php7.3-xml php7.3-xsl`
+6. `sudo apt install php7.3-fpm php7.3-opcache php7.3-xml php7.3-xsl php7.3-mbstring`
 
 
 ## Setup Shell
