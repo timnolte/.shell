@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "description": "My shell/home directory setup.",
   "main": "-",
-  "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-register": "^6.26.0",
-    "node-gyp": "^3.8.0",
-    "node-sass": "^4.12.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.5.4",
+    "babel-core": "^6.26.3",
     "@babel/register": "^7.4.4",
+    "babel-register": "^6.26.0",
+    "lodash": "^4.17.14",
+    "node-gyp": "^3.8.0",
+    "node-sass": "^4.12.0",
     "grunt": "^1.0.4",
     "@patched/grunt-webfont": "^1.9.0",
     "gulp": "^4.0.2"
