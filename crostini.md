@@ -16,7 +16,37 @@ sudo apt install rclone ctags
 sudo apt install software-properties-common
 sudo apt install python-pip python-setuptools python-setuptools-git
 sudo apt install ca-certificates apt-transport-https
+sudo apt install snapd
 ```
+
+
+## Install Snap Package Management
+
+### Install Required Packages
+
+```bash
+sudo apt install fuse2
+sudo apt install squashfs-tools
+sudo apt install libfuse-dev
+sudo apt install libattr1 libattr1-dev
+sudo apt install zlib1g zlib1g-dev
+sudo apt install udev
+```
+
+### Build & Install squashfs
+
+1. `./autogen.sh`
+2. `./configure`
+3. `make`
+4. `sudo make install`
+5. `sudo ldconfig`
+
+### System Permissions Fix for Snap
+
+```bash
+sudo chmod 755 /
+```
+
 
 ## Install PHP 7.3
 
@@ -60,6 +90,7 @@ sudo apt install build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-de
 sudo apt install libsqlite3-dev llvm libncurses5-dev libncursesw5-dev
 sudo apt install xz-utils tk-dev libgdbm-dev liblzma-dev uuid-dev
 ```
+
 ### Download Source & Build Python 3.7
 
 1. `cd workspace`
@@ -68,7 +99,6 @@ sudo apt install xz-utils tk-dev libgdbm-dev liblzma-dev uuid-dev
 4. `./configure --enable-optimizations --with-ensurepip=install`
 5. `make -j8`
 6. `sudo make install`
-
 
 ### Setup Python & pip 3.7 as Default Python & Python 3
 ```shell
@@ -83,6 +113,7 @@ sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip2 27
 sudo update-alternatives --install /usr/bin/pip pip /usr/local/bin/pip3.7 37
 sudo update-alternatives --install /usr/bin/pip3 pip3 /usr/local/bin/pip3.7 37
 ```
+
 
 ## Build & Install NodeJS 10 & NPM
 
@@ -107,11 +138,13 @@ sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake
 6. `sudo make install`
 
 ### Setup Neovim as Default Editor
+
 ```shell
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
 sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 ```
+
 ### Setup Neovim as IDE
 
 1. `cd workspace/`
@@ -125,6 +158,23 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 9. `nvim`
 10. `:PlugUpdate`
 11. `:UpdateRemotePlugins`
+
+
+## Install GUI IDEs
+
+### Install Visual Studio Code
+
+1. `curl -L "https://go.microsoft.com/fwlink/?LinkID=760868" > ~/.tmp/vscode.deb`
+2. `sudo dpkg -i ~/.tmp/vscode.deb`
+3. `sudo apt-get install -f`
+4. `sudo apt-get install apt-transport-https`
+5. `sudo apt-get update`
+6. `sudo apt-get install code`
+
+### Install PhpStorm
+
+1. Install Visual Studio Code - `sudo snap install code --classic`
+2. Install PhpStorm - `sudo snap install phpstorm --classic`
 
 
 ## MariaDB Setup
@@ -160,3 +210,10 @@ http://dev.mysql.com
 Consider joining MariaDB's strong and vibrant community:
 https://mariadb.org/get-involved/
 ```
+
+### PhpMyAdmin Installation
+
+1. `sudo apt install phpmyadmin`
+2. `sudo ln -s /usr/share/phpmyadmin /var/www/html/mdb-admin`
+3. 
+
