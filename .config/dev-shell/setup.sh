@@ -65,16 +65,26 @@ function setup() {
     chmod +x wp-cli.phar
     mv wp-cli.phar $HOME_BIN/wp
 		echo 'wp-cli installed'
+
+    echo 'setting up local wp-cli configuration directory'
+    mkdir $HOME/.wp-cli
+
+    echo 'installing wp-cli bash completion'
+    curl -L https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash -o $HOME_LOCAL/share/bash-completion/completions/wp-completion.bash
+    echo 'wp-cli bash completion installed'
 	fi
 
   # Install rclone bash completion
   if [ -f "/usr/bin/rclone" -a ! -d $HOME_LOCAL/share/bash-completion ] || [ -f "usr/bin/rclone" -a ! -d /etc/bash-completion ]; then
     echo 'installing current rclone bash completion'
+    
     if [ -d $HOME_LOCAL/share/bash-completion ]; then
     	rclone genautocomplete $HOME_LOCAL/share/bash-completion/completions/rclone.bash
     else
-	sudo rclone genautocomplete
+	    sudo rclone genautocomplete
     fi
+
+    echo 'rclone bash completion installed'
   fi
 
 }
