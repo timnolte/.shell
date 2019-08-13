@@ -160,6 +160,11 @@ fi
 # Define a home-based tmp
 export TMPDIR=~/.tmp
 
+# WordPress Test Suite Setup
+export WP_TESTS_DIR=$TMPDIR/wordpress-tests-lib
+export WP_CORE_DIR=$TMPDIR/wordpress
+
+
 if [ -f ~/.fzf.bash ]; then
   . ~/.fzf.bash
 fi

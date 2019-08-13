@@ -126,7 +126,7 @@ sudo update-alternatives --install /usr/bin/pip3 pip3 /usr/local/bin/pip3.7 37
 
 ### Install Required Dependancies
 
-sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip xsel
+sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip xsel editorconfig
 
 ### Checkout and Build Neovim
 
@@ -215,5 +215,5 @@ https://mariadb.org/get-involved/
 
 1. `sudo apt install phpmyadmin`
 2. `sudo ln -s /usr/share/phpmyadmin /var/www/html/mdb-admin`
-3. 
+3.
 
