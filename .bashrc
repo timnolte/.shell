@@ -116,6 +116,11 @@ if ! shopt -oq posix; then
 
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+  # Add docker-compose completion
+  if [ -f ~/.local/share/bash_completion/completions/docker-compose.bash ]; then
+    . ~/.local/share/bash_completion/completions/docker-compose.bash
+  fi
+
   # Add rclone Bash Completion
   if [ -f ~/.local/share/bash-completion/completions/rclone.bash ]; then
     . ~/.local/share/bash-completion/completions/rclone.bash
