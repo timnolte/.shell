@@ -1,4 +1,5 @@
 # Development & System Directories
+.PhpStorm*
 backup
 node_modules
 vendor
@@ -11,26 +12,44 @@ workspace
 # Local Home Directories
 .cache
 .composer
-#.config/configstore/
-#.config/keybase/
-#.config/nginx/sites-enabled/
-#.config/nvim/
+.config
+#.config/Code
+#.config/Yubico
+#.config/configstore
+#.config/dconf
+#.config/git
+#.config/gtk-2.0
+#.config/nginx/ssl
+#.config/nvim
+#.config/pulse
+.dbus
 .fzf
 .gem
+.gimp-2.8
 .gnupg
+.java
 .local/bin
 .local/lib
 .local/share
+.ngrok2
 .node-gyp
 .npm
 .nvm
 .pdepend
+.pki
 .subversion
+.thumbnails
 .tmp
+.viminfo
 .wp-cli
+snap
+
 
 # Files
+.Xauthority
 .bash_history
+#.config/cros-garcon.conf
+#.config/weston.ini
 .lesshst
 *.logs
 .mysql_history
@@ -44,3 +63,4 @@ workspace
 passwds.txt
 tags
 tags.*
+
