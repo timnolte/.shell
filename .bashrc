@@ -116,6 +116,11 @@ if ! shopt -oq posix; then
 
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+  # Add npm completion
+  if [ -f ~/.local/share/bash-completion/completions/npm.bash ]; then
+    . ~/.local/share/bash-completion/completions/npm.bash
+  fi
+
   # Add docker-compose completion
   if [ -f ~/.local/share/bash_completion/completions/docker-compose.bash ]; then
     . ~/.local/share/bash_completion/completions/docker-compose.bash
