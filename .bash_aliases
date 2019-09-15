@@ -31,11 +31,11 @@ alias vi='nvim'
 alias vimdiff='nvim -d'
 
 # common workspace cd shortcuts
+alias go-w='cd ${workspace}'
+alias go-proj='cd ${workspace}/projects'
 alias go-wp='cd ${wp_workspace}/wp'
 alias go-wpp='cd ${wp_workspace}/wp-content/plugins'
 alias go-sfi='cd ${wp_workspace}/wp-content/plugins/scheduled-featured-images'
-alias go-wpsqrl='cd ${wp_workspace}/wp-content/plugins/wp-sqrl'
 alias go-ewo='cd ${wp_workspace}/wp-content/plugins/endowp-oembed'
 alias go-wjp='cd ${wp_workspace}/wp-content/plugins/jetpack'
-alias go-ewphttp='cd ${wp_workspace}/wp-content/plugins/enhanced-wp-http-req'
 alias go-vida='cd ${wp_workspace}/wp-content/themes/wprig-vida-impact-missions'
