@@ -117,9 +117,11 @@ sudo update-alternatives --install /usr/bin/pip3 pip3 /usr/local/bin/pip3.7 37
 
 ## Build & Install NodeJS 10 & NPM
 
+> Instead of installing a system package it is more flexible to install NVM and use a user-based NodeJS/NPM.
+
 1. `cd workspace/`
-2. `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
-3. `sudo apt-get install -y nodejs`
+2. `mkdir ~/.nvm`
+2. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash`
 
 
 ## Build & Install Neovim
@@ -138,6 +140,23 @@ sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake
 6. `sudo make install`
 
 ### Setup Neovim as Default Editor
+
+> NOTE: For a user-managed configuration add items to `.bash_aliases` instead of changing the system defaults.
+
+#### User Only
+
+```shell
+# vim && neovim
+# clean the vim swap file
+alias nvimc='rm -I ~/nvim/swap/*'
+alias nvimcu='rm -I ~/nvim/undo/*'
+alias vim='nvim'
+alias vi='nvim'
+alias editor='nvim'
+alias vimdiff='nvim -d'
+```
+
+#### System Wide
 
 ```shell
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60

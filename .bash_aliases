@@ -28,6 +28,7 @@ alias nvimc='rm -I ~/nvim/swap/*'
 alias nvimcu='rm -I ~/nvim/undo/*'
 alias vim='nvim'
 alias vi='nvim'
+alias editor='nvim'
 alias vimdiff='nvim -d'
 
 # common workspace cd shortcuts
