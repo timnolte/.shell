@@ -190,6 +190,7 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 ```
 sudo apt install libnotify4 libnspr4 libnss3 libxkbfile1 libsecret-common libsecret-1-0
 ```
+##### Download and Install Package
 
 1. `curl -L "https://go.microsoft.com/fwlink/?LinkID=760868" > ~/.tmp/vscode.deb`
 2. `sudo dpkg -i ~/.tmp/vscode.deb`
