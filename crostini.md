@@ -103,15 +103,15 @@ sudo apt install xz-utils tk-dev libgdbm-dev liblzma-dev uuid-dev
 ### Setup Python & pip 3.7 as Default Python & Python 3
 ```shell
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 27
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 37
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.7 37
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 37
 sudo update-alternatives --install /usr/bin/python3m-config python3-config /usr/local/bin/python3.7-config 37
 sudo update-alternatives --install /usr/bin/python3m python3m /usr/local/bin/python3.7m 37
 sudo update-alternatives --install /usr/bin/python3m-config python3m-config /usr/local/bin/python3.7m-config 37
 sudo mv /usr/bin/pip /usr/bin/pip.bak
 sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip2 27
-sudo update-alternatives --install /usr/bin/pip pip /usr/local/bin/pip3.7 37
 sudo update-alternatives --install /usr/bin/pip3 pip3 /usr/local/bin/pip3.7 37
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 37
 ```
 
 
@@ -173,7 +173,7 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 5. `sudo pip2 install --upgrade neovim`
 6. `sudo pip3 install --upgrade neovim`
 7. `sudo gem install neovim`
-8. `sudo npm install -g neovim`
+8. `npm install -g neovim`
 9. `nvim`
 10. `:PlugUpdate`
 11. `:UpdateRemotePlugins`
@@ -183,6 +183,8 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 
 ### Install Visual Studio Code
 
+#### Debian Package Method
+
 1. `curl -L "https://go.microsoft.com/fwlink/?LinkID=760868" > ~/.tmp/vscode.deb`
 2. `sudo dpkg -i ~/.tmp/vscode.deb`
 3. `sudo apt-get install -f`
@@ -190,10 +192,15 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 5. `sudo apt-get update`
 6. `sudo apt-get install code`
 
+#### Snap Package Method
+
+1. `sudo snap install code --classic`
+
 ### Install PhpStorm
 
-1. Install Visual Studio Code - `sudo snap install code --classic`
-2. Install PhpStorm - `sudo snap install phpstorm --classic`
+#### Snap Package Method
+
+1. `sudo snap install phpstorm --classic`
 
 
 ## MariaDB Setup
