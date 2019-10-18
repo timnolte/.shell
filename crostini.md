@@ -194,10 +194,6 @@ sudo apt install libnotify4 libnspr4 libnss3 libxkbfile1 libsecret-common libsec
 
 1. `curl -L "https://go.microsoft.com/fwlink/?LinkID=760868" > ~/.tmp/vscode.deb`
 2. `sudo dpkg -i ~/.tmp/vscode.deb`
-3. `sudo apt-get install -f`
-4. `sudo apt-get install apt-transport-https`
-5. `sudo apt-get update`
-6. `sudo apt-get install code`
 
 #### Snap Package Method
 
