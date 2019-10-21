@@ -1,6 +1,7 @@
 [user]
   name = tim.nolte
   email = tim.nolte@ndigitals.com
+	signingkey = E39A73942DB70E71
 [push]
   default = simple
 [core]
