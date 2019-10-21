@@ -174,7 +174,31 @@ export TMPDIR=~/.tmp
 export WP_TESTS_DIR=$TMPDIR/wordpress-tests-lib
 export WP_CORE_DIR=$TMPDIR/wordpress
 
+# SSH Agent Startup
+SSH_ENV="$HOME/.ssh/environment"
+SSH_KEY="$HOME/.ssh/timnolte_id_rsa"
 
+function start_agent {
+    echo "Initialising new SSH agent..."
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    echo succeeded
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add "${SSH_KEY}";
+}
+
+# Source SSH settings, if applicable
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    #ps ${SSH_AGENT_PID} doesn't work under cywgin
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+
+# FZF Setup
 if [ -f ~/.fzf.bash ]; then
   . ~/.fzf.bash
 fi
