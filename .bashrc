@@ -158,6 +158,9 @@ fi
 if [ -d ~/vendor/bin ]; then
   export PATH=$PATH:~/vendor/bin
 fi
+if [ -d ~/.buildkite-agent/bin ]; then
+  export PATH=$PATH:~/.buildkite-agent/bin
+fi
 
 # Set GO path
 export GOPATH=`pwd`/go
@@ -170,9 +173,18 @@ fi
 # Define a home-based tmp
 export TMPDIR=~/.tmp
 
+# Java Environment Setup
+if [ -d /usr/lib/jvm/java-11-openjdk-amd64 ]; then
+  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+fi
+
 # WordPress Test Suite Setup
-export WP_TESTS_DIR=$TMPDIR/wordpress-tests-lib
-export WP_CORE_DIR=$TMPDIR/wordpress
+if [ -d "$TMPDIR"/wordpress-tests-lib ]; then
+  export WP_TESTS_DIR=$TMPDIR/wordpress-tests-lib
+fi
+if [ -d "$TMPDIR"/wordpress ]; then
+  export WP_CORE_DIR=$TMPDIR/wordpress
+fi
 
 # SSH Agent Startup
 SSH_ENV="$HOME/.ssh/environment"
