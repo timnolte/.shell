@@ -170,6 +170,11 @@ if [ -d ~/go/bin ]; then
   export PATH=$PATH:~/go/bin
 fi
 
+# Set Ruby user install path
+if [ -d ~/.gem/ruby/2.5.0/bin ]; then
+  export PATH=$PATH:~/.gem/ruby/2.5.0/bin
+fi
+
 # Define a home-based tmp
 export TMPDIR=~/.tmp
 
@@ -214,3 +219,6 @@ fi
 if [ -f ~/.fzf.bash ]; then
   . ~/.fzf.bash
 fi
+
+# added by travis gem
+[ -f /home/tim/.travis/travis.sh ] && source /home/tim/.travis/travis.sh
