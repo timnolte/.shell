@@ -57,8 +57,10 @@ snap
 .mysql_history
 .python_history
 .ssh/authorized_keys
+.ssh/environment
 .ssh/known_hosts
 .ssh/*_rsa*
+.tig_history
 .v8flags.*
 .wget-hsts
 .yarnrc

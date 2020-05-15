@@ -21,3 +21,7 @@
   prompt = false
 [alias]
 	pull-rebase = pull --single-branch --rebase=preserve
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2

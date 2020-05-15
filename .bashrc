@@ -215,6 +215,9 @@ else
     start_agent;
 fi
 
+# GPG Configuration
+export GPG_TTY=$(tty)
+
 # FZF Setup
 if [ -f ~/.fzf.bash ]; then
   . ~/.fzf.bash
