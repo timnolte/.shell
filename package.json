@@ -4,16 +4,16 @@
   "description": "My shell/home directory setup.",
   "main": "-",
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/register": "^7.6.2",
+    "@babel/core": "^7.10.1",
+    "@babel/register": "^7.10.1",
     "@patched/grunt-webfont": "^1.9.0",
     "babel-core": "^6.26.3",
     "babel-register": "^6.26.0",
-    "grunt": "^1.0.4",
+    "grunt": "^1.1.0",
     "gulp": "^4.0.2",
     "lodash": "^4.17.15",
     "node-gyp": "^3.8.0",
-    "node-sass": "^4.14.0"
+    "node-sass": "^4.14.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
