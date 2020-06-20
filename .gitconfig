@@ -20,7 +20,20 @@
 [difftool]
   prompt = false
 [alias]
-	pull-rebase = pull --single-branch --rebase=preserve
+  bugfix = "!bfb() { git co-m; git pull; git co-b fix/$1; }; bfb"
+  cl = clone
+  ci = commit
+  co = checkout
+  co-b = checkout -b
+  co-m = checkout main
+  feature = "!fb() { git co-m; git pull; git co-b feature/$1; }; fb"
+  hotfix = "!hfb() { git co-m; git pull; git co-b hotfix/$1; }; hfb"
+  pull-r = pull --single-branch --rebase=preserve
+  push-u = !git push -u origin $(git symbolic-ref --short HEAD)
+  push-t = push --tags
+  release = "!rb() { git co-m; git pull; git co-b release/$1; }; rb"
+  st = status
+  tag-rel = "!tr() { git co-m; git pull; git tag release-$(date +%Y%m%d); git push-t; }; tr"
 [commit]
 	gpgsign = true
 [gpg]
