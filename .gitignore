@@ -61,9 +61,11 @@ snap
 .ssh/known_hosts
 .ssh/*_rsa*
 .tig_history
+.tmp*
 .v8flags.*
 .wget-hsts
 .yarnrc
+.yo-rc-global.json
 passwds.txt
 tags
 tags.*
