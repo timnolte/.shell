@@ -132,8 +132,13 @@ if ! shopt -oq posix; then
   fi
 
   # Add WordPress Bash Completion
-  if [ -f ~/.local/share/bash-completion/completions/wp-completion.bash ]; then
-    . ~/.local/share/bash-completion/completions/wp-completion.bash
+  if [ -f ~/.local/share/bash-completion/completions/wp.bash ]; then
+    . ~/.local/share/bash-completion/completions/wp.bash
+  fi
+
+  # Add GitHub CLI Bash Completion
+  if [ -f ~/.local/share/bash-completion/completions/gh.bash ]; then
+    . ~/.local/share/bash-completion/completions/gh.bash
   fi
 fi
 

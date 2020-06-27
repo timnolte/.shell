@@ -70,21 +70,43 @@ function setup() {
     mkdir $HOME/.wp-cli
 
     echo 'installing wp-cli bash completion'
-    curl -L https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash -o $HOME_LOCAL/share/bash-completion/completions/wp-completion.bash
+    curl -L https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash -o $HOME_LOCAL/share/bash-completion/completions/wp.bash
     echo 'wp-cli bash completion installed'
 	fi
 
   # Install rclone bash completion
-  if [ -f "/usr/bin/rclone" -a ! -d $HOME_LOCAL/share/bash-completion ] || [ -f "usr/bin/rclone" -a ! -d /etc/bash-completion ]; then
+  if [ -x "$(command -v rclone)" -a ! -d $HOME_LOCAL/share/bash-completion ] || [ -x "$(command -v rclone)" -a ! -d /etc/bash-completion ]; then
     echo 'installing current rclone bash completion'
     
     if [ -d $HOME_LOCAL/share/bash-completion ]; then
-    	rclone genautocomplete $HOME_LOCAL/share/bash-completion/completions/rclone.bash
+    	rclone genautocomplete bash $HOME_LOCAL/share/bash-completion/completions/rclone.bash
     else
-	    sudo rclone genautocomplete
+	    sudo rclone genautocomplete bash
     fi
 
     echo 'rclone bash completion installed'
+  fi
+
+  # Install npm bash completion
+  if [ -x "$(command -v npm)" -a ! -d $HOME_LOCAL/share/bash-completion ]; then
+    echo 'installing current npm bash completion'
+    
+    if [ -d $HOME_LOCAL/share/bash-completion ]; then
+    	npm completion > $HOME_LOCAL/share/bash-completion/completions/npm.bash
+    fi
+
+    echo 'npm bash completion installed'
+  fi
+
+  # Install GitHub bash completion
+  if [ -x "$(command -v gh)" -a ! -d $HOME_LOCAL/share/bash-completion ]; then
+    echo 'installing current GitHub CLI bash completion'
+    
+    if [ -d $HOME_LOCAL/share/bash-completion ]; then
+    	gh completion -s bash > $HOME_LOCAL/share/bash-completion/completions/gh.bash
+    fi
+
+    echo 'GitHub bash completion installed'
   fi
 
 }
