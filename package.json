@@ -4,16 +4,18 @@
   "description": "My shell/home directory setup.",
   "main": "-",
   "devDependencies": {
-    "@babel/core": "^7.10.1",
-    "@babel/register": "^7.10.1",
-    "@patched/grunt-webfont": "^1.9.0",
+    "@babel/core": "^7.11.6",
+    "@babel/register": "^7.11.5",
     "babel-core": "^6.26.3",
     "babel-register": "^6.26.0",
-    "grunt": "^1.1.0",
+    "grunt": "^1.3.0",
     "gulp": "^4.0.2",
-    "lodash": "^4.17.15",
-    "node-gyp": "^3.8.0",
-    "node-sass": "^4.14.1"
+    "lodash": "^4.17.20",
+    "node-sass": "^4.14.1",
+    "grunt-cli": "^1.3.2",
+    "neovim": "^4.9.0",
+    "rimraf": "^3.0.2",
+    "yarn": "^1.22.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,8 +29,5 @@
   "bugs": {
     "url": "https://github.com/timnolte/.shell/issues"
   },
-  "homepage": "https://github.com/timnolte/.shell#readme",
-  "dependencies": {
-    "grunt-cli": "^1.3.2"
-  }
+  "homepage": "https://github.com/timnolte/.shell#readme"
 }
