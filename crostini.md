@@ -24,7 +24,7 @@ $ ~/.config/dev-shell/setup.sh`
 
 ```bash
 $ sudo apt install net-tools tree wget curl procps mlocate man gettext \
- ccrypt gnupg2 \
+ ccrypt gnupg2 gnupg-agent \
  grep bash-completion \
  git subversion php-cli python python-pip python-dev \
  python3 python3-pip python3-dev ruby ruby-dev golang make \
