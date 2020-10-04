@@ -89,6 +89,12 @@ $ sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 37
 2. `mkdir ~/.nvm`
 3. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash`
 
+### Build & Install Shell NPM Dependencies
+
+```bash
+$ npm install
+```
+
 ## Build & Install Neovim
 
 ### Install Required Dependancies
