@@ -196,6 +196,15 @@ if [ -d "$TMPDIR"/wordpress ]; then
   export WP_CORE_DIR=$TMPDIR/wordpress
 fi
 
+# Default Editor Setup
+if hash nvim 2>/dev/null; then
+  export EDITOR=nvim
+elif hash vim 2>/dev/null; then
+  export EDITOR=vim
+elif hash vi 2>/dev/null; then
+  export EDITOR=vi
+fi
+
 # SSH Agent Startup
 SSH_ENV="$HOME/.ssh/environment"
 SSH_KEY="$HOME/.ssh/timnolte_id_rsa"
