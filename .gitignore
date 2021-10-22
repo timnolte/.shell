@@ -71,3 +71,21 @@ passwds.txt
 tags
 tags.*
 
+# dumping ground, TODO: sort these.
+.PlayOnLinux
+.android
+.bsp
+.buildkite
+.ddev
+.dosbox
+.ivy2
+.local/state
+.mozilla
+.sbt
+.steam
+.steampath
+.steampid
+.wine
+.wine32
+Desktop
+wp-env

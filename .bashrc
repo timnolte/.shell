@@ -207,7 +207,7 @@ fi
 
 # SSH Agent Startup
 SSH_ENV="$HOME/.ssh/environment"
-SSH_KEY="$HOME/.ssh/timnolte_id_rsa"
+SSH_KEYS=( "$HOME/.ssh/timnolte_id_rsa" "$HOME/.ssh/tnolte_id_rsa" )
 
 function start_agent {
     echo "Initialising new SSH agent..."
@@ -215,7 +215,10 @@ function start_agent {
     echo succeeded
     chmod 600 "${SSH_ENV}"
     . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add "${SSH_KEY}";
+    for SSH_KEY in "${SSH_KEYS[@]}"
+    do
+      /usr/bin/ssh-add "${SSH_KEY}";
+    done
 }
 
 # Source SSH settings, if applicable
