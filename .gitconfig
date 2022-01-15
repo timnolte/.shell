@@ -1,7 +1,7 @@
 [user]
   name = Tim Nolte
   email = tim.nolte@ndigitals.com
-	signingkey = B872035D40077033
+	signingkey = C81E56726FF7F8FC
 [push]
   default = simple
 	followTags = false
