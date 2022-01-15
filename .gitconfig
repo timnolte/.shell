@@ -1,7 +1,7 @@
 [user]
   name = Tim Nolte
   email = tim.nolte@ndigitals.com
-	signingkey = B872035D40077033
+	signingkey = 1E6B01AA1C94D82DEFB1CC43E39A73942DB70E71
 [push]
   default = simple
 	followTags = false
@@ -25,6 +25,9 @@
   ci = commit
   co = checkout
   co-b = checkout -b
+  co-d = checkout develop
+  co-i = checkout integration
+  co-l = checkout live
   co-m = checkout main
   feature = "!fb() { git co-m; git pull; git co-b feature/$1; }; fb"
   hotfix = "!hfb() { git co-m; git pull; git co-b hotfix/$1; }; hfb"
@@ -34,6 +37,7 @@
   release = "!rb() { git co-m; git pull; git co-b release/$1; }; rb"
   st = status
   tag-rel = "!tr() { git co-m; git pull; git tag release-$(date +%Y%m%d); git push-t; }; tr"
+  tag-rel-l = "!trl() { git co-l; git pull; git tag release-$(date +%Y%m%d); git push-t; }; trl"
 [commit]
 	gpgsign = true
 [gpg]

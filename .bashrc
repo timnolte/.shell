@@ -149,7 +149,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$termux_root"/usr/local/lib
 export PATH=$PATH:"$termux_root"/usr/local/bin
 
 if [ -d ~/.local/bin ]; then
-  export PATH=$PATH:~/.local/bin
+  export PATH=~/.local/bin:$PATH
 fi
 if [ -d ~/.composer/vendor/bin ]; then
   export PATH=$PATH:~/.composer/vendor/bin
@@ -234,6 +234,10 @@ fi
 
 # GPG Configuration
 export GPG_TTY=$(tty)
+
+# F1 CLI SSL
+export F1_TLS_CERT=
+export F1_TLS_KEY=
 
 # FZF Setup
 if [ -f ~/.fzf.bash ]; then
