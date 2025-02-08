@@ -1,7 +1,7 @@
 [user]
   name = Tim Nolte
   email = tim.nolte@ndigitals.com
-	signingkey = C81E56726FF7F8FC
+  signingkey = C81E56726FF7F8FC
 [push]
   default = simple
 	followTags = false
@@ -21,6 +21,7 @@
   prompt = false
 [alias]
   bugfix = "!bfb() { git co-m; git pull; git co-b fix/$1; git push-u; }; bfb"
+  bugfix-dev = "!bfbd() { git co-d; git pull; git co-b fix/$1; git push-u; }; bfbd"
   cl = clone
   ci = commit
   co = checkout
@@ -30,10 +31,12 @@
   co-l = checkout live
   co-m = checkout main
   feature = "!fb() { git co-m; git pull; git co-b feature/$1; git push-u; }; fb"
+  feature-dev = "!fbd() { git co-d; git pull; git co-b feature/$1; git push-u; }; fbd"
   hotfix = "!hfb() { git co-m; git pull; git co-b hotfix/$1; git push-u; }; hfb"
   pull-p = pull --prune
   pull-r = pull --single-branch --rebase=preserve
   push-u = !git push -u origin $(git symbolic-ref --short HEAD)
+  push-uu = !git push -u upstream $(git symbolic-ref --short HEAD)
   push-t = push --tags
   release = "!rb() { git co-m; git pull; git co-b release/$1; }; rb"
   st = status
@@ -43,3 +46,5 @@
 	gpgsign = true
 [gpg]
 	program = gpg2
+[pull]
+	ff = only

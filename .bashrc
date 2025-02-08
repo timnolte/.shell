@@ -140,6 +140,21 @@ if ! shopt -oq posix; then
   if [ -f ~/.local/share/bash-completion/completions/gh.bash ]; then
     . ~/.local/share/bash-completion/completions/gh.bash
   fi
+
+  # Add WP-CLI Bash Completion
+  if [ -f ~/.local/share/bash-completion/completions/wp.bash ]; then
+    . ~/.local/share/bash-completion/completions/wp.bash
+  fi
+
+  # Add nala Bash Completion
+  if [ -f ~/.local/share/bash-completion/completions/nala.bash ]; then
+    . ~/.local/share/bash-completion/completions/nala.bash
+  fi
+
+  # Add DevPod CLI Bash Completion
+  if [ -f ~/.local/share/bash-completion/completions/devpod.bash ]; then
+    . ~/.local/share/bash-completion/completions/devpod.bash
+  fi
 fi
 
 # Add additional LD_LIBRARY_PATH
@@ -168,11 +183,13 @@ if [ -d ~/.buildkite-agent/bin ]; then
 fi
 
 # Set GO path
-export GOPATH=`pwd`/go
+if [ -d ~/go/bin ]; then
+  export GOPATH=~/go
+fi
 
 # Add GO bin to PATH
 if [ -d ~/go/bin ]; then
-  export PATH=$PATH:~/go/bin
+  export PATH=$PATH:$GOPATH/bin
 fi
 
 # Set Ruby user install path

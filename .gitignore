@@ -91,3 +91,21 @@ tags.*
 .wine32
 Desktop
 wp-env
+.FlashPrint5/
+.actrc
+.devpod/
+.docker/
+.dotnet/
+.gnome/
+.lemminx/
+.local/include/
+.pnpm-store/
+.quakespasm/
+.ssh/codespaces.jetbrains
+.ssh/codespaces.jetbrains.pub
+.ssh/known_hosts.old
+Applications/
+My Games/
+intelephense/
+ovtr/
+quake/
